@@ -5,9 +5,9 @@ const port = process.argv[2]
 
 const temp = function (temp) {
   return {
-    heur: time.getHours(),
-    minute: time.getMinutes(),
-    second: time.getSeconds()
+    heur: temp.getHours(),
+    minute: temp.getMinutes(),
+    second: temp.getSeconds()
   }
 }
 
@@ -31,10 +31,8 @@ http.createServer(function (request, response) {
     url = url.parse(request.url, true)
     response.end(JSON.stringify(parseQuery(url)))
   } else 
-  {
-    response.writeHead(405)
-    response.end()
-  }
+
+  
 }
                  ).listen(+port, function () {
   console.log(port)
