@@ -30,10 +30,13 @@ http.createServer(function (request, response) {
     response.writeHead(200, {'Content-Type': 'application/json'})
     url = url.parse(request.url, true)
     response.end(JSON.stringify(parseQuery(url)))
-  } else {
+  } else 
+  {
     response.writeHead(405)
     response.end()
   }
-}).listen(+port, function () {
-  console.log('Server listening on http://localhost:%s', port)
-})
+}
+                 ).listen(+port, function () {
+  console.log(port)
+}
+                         )
