@@ -18,7 +18,7 @@ const parseQuery = function (url) {
       return unixTime(new Date(url.query.iso))
     case '/api/unixtime':
       return unixTime(new Date(url.query.iso))
-    default: return 'please enter a valid  url'
+    
   }
 }
 
