@@ -8,17 +8,17 @@ const temp = function (temp) {
   }
 }
 
-function tousTime (time) {
+function unixTime (time) {
   return {unixtime: time.getTime()}
 }
 
 const parseQuery = function (url) {
   switch (url.pathname) {
     case '/api/parsetime':
-      return tousTime(new Date(url.query.iso))
+      return unixTime(new Date(url.query.iso))
     case '/api/unixtime':
-      return tousTime(new Date(url.query.iso))
-    default: return 'please enter a valid endpoint url'
+      return unixTime(new Date(url.query.iso))
+    default: return 'please enter a valid  url'
   }
 }
 
