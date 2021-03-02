@@ -5,9 +5,7 @@ const server = http.createServer(function (req, res) {
   if (req.method == 'POST') {
    req.pipe(map((chunk) => {
     return chunk.toString().toUpperCase()
-  }
-  )
-  ).pipe(res);
+  }) ).pipe(res);
   	}
     )
     ).pipe(res)
