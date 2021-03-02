@@ -4,10 +4,7 @@ const url = require('url')
 const port = process.argv[2]
 
 const temp = function (temp) {
-  return {
-    heur: temp.getHours(),
-    minute: temp.getMinutes(),
-    second: temp.getSeconds()
+  return {heur: temp.getHours(),minute: temp.getMinutes(),second: temp.getSeconds()
   }
 }
 
